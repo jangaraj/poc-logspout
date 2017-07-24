@@ -1,0 +1,18 @@
+# POC Logspout
+
+[Lospout](https://github.com/gliderlabs/logspout) with [logspout-logstash](https://github.com/looplab/logspout-logstash) plugin.
+
+Required Logstash pipeline config (JSON input codec):
+
+```
+input {
+  udp {
+    port  => 5000
+    codec => json
+  }
+  tcp {
+    port  => 5000
+    codec => json
+  }
+}
+```
